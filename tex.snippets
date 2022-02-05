@@ -1,0 +1,66 @@
+snippet today "Date"
+`date +%F`
+endsnippet
+snippet beg "begin{} / end{}" b 
+\begin{$1}
+	$0
+\end{$1}
+endsnippet
+snippet bf "textbf{}" 
+\textbf{$1} $0
+endsnippet
+snippet it "textit{}"
+\textit{$1} $0
+endsnippet
+snippet sec "section{}"
+\section{$1}
+$0
+endsnippet
+snippet tbl "table" b
+\begin{center}
+\textbf{$1}
+\textit{$2}\\\
+\begin{tabular}{$3}
+$0
+\end{tabular}
+\end{center}
+endsnippet
+snippet mh "math"
+$$1$$0
+endsnippet
+snippet art "article template" b
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usepackage[hidelinks]{hyperref}
+\usepackage{csquotes}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage[a4paper,left=1in,right=1in,top=1in,bottom=1in,footskip=.25in]{geometry}
+%uncomment for bibliography
+%\usepackage[style=apa,backend=biber]{biblatex}
+%\addbibresource{bibtex.bib}
+
+\author{$1}
+\title{$2}
+\begin{document}
+\maketitle
+
+$0
+
+%\printbibliography
+\end{document}
+endsnippet
+snippet ci "cite" 
+(\cite{$1})$0
+endsnippet
+snippet cy	"cite year"
+(\citeyear{$1})$0
+endsnippet
